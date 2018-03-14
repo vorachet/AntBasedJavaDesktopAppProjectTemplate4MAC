@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MyApp" default="default" basedir=".">
+    <property file = "build.properties"/>
+
+    <taskdef name="bundleapp" classname="com.oracle.appbundler.AppBundlerTask" 
+        classpath="lib/appbundler-1.0.jar" />
+
+    <path id="src.path">
+        <pathelement path="src/main/java"/>
+    </path>
+
+    <path id="compile.path">
+        <pathelement path="bin"/>
+        <fileset dir="lib/">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="unit.test.path">
+        <path refid="compile.path"/>
+        <pathelement path="src/test/java"/>
+    </path>
+
+    <target name="default" depends="clean, compile, test, package">
+    </target>
+
+    <target name="package">
+        <jar destfile="dist/MyApp.jar" filesetmanifest="mergewithoutmain">
+            <fileset dir="bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="lib/slf4j-api-1.7.25.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="lib/slf4j-jdk14-1.7.25.jar"/>
+            <manifest>
+                <attribute name="Main-Class" value="com.example.MyApp"/>
+            </manifest>
+        </jar>
+    
+        <zip destfile="dist/MyApp4Win.zip">
+            <zipfileset dir="resources" prefix="resources"/>
+            <zipfileset file="dist/MyApp.jar"/>
+        </zip>
+
+        <delete file="dist/MyApp.dmg"/>
+        <delete dir="dist/MyApp.app"/>
+    
+        <bundleapp outputdirectory="dist" name="MyApp" displayname="MyApp" 
+            identifier="MyApp" mainclassname="com.example.MyApp" icon="resources/app.icns">
+          <classpath file="dist/MyApp.jar"/>
+          <classpath file="lib/quaqua.jar"/>
+          <classpath file="lib/MacWidgets.jar"/>
+          <librarypath file="lib/libquaqua.jnilib"/>
+          <librarypath file="lib/libquaqua64.jnilib"/>
+          <librarypath file="lib/libquaqua64.dylib"/>
+          
+          <option value="-Dapple.laf.useScreenMenuBar=true"/>
+          <option value="-Duser.dir=$APP_ROOT/Contents/Home/"/>
+          <!--option value="-Dapple.awt.UIElement=true"/-->
+        </bundleapp>
+
+        <copydir src="resources" dest="dist/MyApp.app/Contents/Home/resources"/>
+
+        <exec executable="hdiutil">
+            <arg line="create -srcfolder dist/MyApp.app dist/MyApp.dmg"/>
+        </exec>
+    </target>
+
+    <target name="clean">
+        <delete dir="bin" />
+        <delete dir="dist" />
+        <mkdir dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <javac destdir="bin" includes="**/*.java" target="1.8" includeantruntime="false">
+            <src path="src/main/java"/>
+            <src path="src/test/java"/>
+            <classpath refid="compile.path"/>
+        </javac>
+    </target>
+
+    <target name="test" depends="compile">
+        <junit printsummary="yes" haltonfailure="no">
+        <jvmarg value="-Dfile.encoding=UTF-8"/>
+        <classpath refid="unit.test.path"/>
+        <batchtest fork="yes" todir="bin">
+            <fileset dir="src/test/java"/>
+            <formatter type="plain" />
+            <formatter type="xml" />
+        </batchtest>
+      </junit>
+    </target>
+
+</project>
