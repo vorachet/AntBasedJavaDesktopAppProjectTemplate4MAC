@@ -59,7 +59,7 @@
         <copydir src="resources" dest="dist/MyApp.app/Contents/Home/resources"/>
 
         <exec executable="hdiutil">
-            <arg line="create -srcfolder dist/MyApp.app dist/MyApp.dmg"/>
+            <arg line="create -srcfolder dist/MyApp.app dist/MyApp4Mac.dmg"/>
         </exec>
     </target>
 
