@@ -20,4 +20,4 @@ deploy:
   skip_cleanup: true
   name: Build $(date +'%d.%m.%Y %R')
   on:
-    repo: kolovos/markingmate
+    repo: vorachet/JavaDesktopAppProjectTemplate
