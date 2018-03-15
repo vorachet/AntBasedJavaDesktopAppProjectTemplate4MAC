@@ -1,12 +1,2 @@
 language: java
-install: ant deps
-os:
-  - osx
-jdk:
-  - oraclejdk8  
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-script:
-  - ant
+script: ant default
