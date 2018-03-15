@@ -15,8 +15,8 @@ deploy:
   api_key:
     secure: yXVi1b05dFPWuRDF_5ilsw
   file: 
-    - dist/MyApp.dmg
-    - dist/MyApp.zip
+    - dist/MyApp4Mac.dmg
+    - dist/MyApp4Win.zip
   skip_cleanup: true
   name: Build $(date +'%d.%m.%Y %R')
   on:
