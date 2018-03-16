@@ -84,8 +84,6 @@ Folder structure
         │       └── com
         │           └── example
         │               ├── MyApp.java
-        │               └── ui
-        │                   └── MainFrame.java
         └── test
             └── java
                 └── com
@@ -108,9 +106,6 @@ The Bin and Dist folder after successfully running the Ant script
     │           ├── MyApp.class
     │           ├── test
     │           │   └── TestMyApp.class
-    │           └── ui
-    │               ├── MainFrame$1.class
-    │               └── MainFrame.class
     ├── dist
     │   ├── MyApp.app
     │   │   └── Contents
