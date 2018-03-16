@@ -7,5 +7,5 @@ before_install:
 - export PATH=`pwd`/apache-ant-1.10.2/bin:$PATH
 script:
 - ant
-- rm ../apache-ant-1.10.2-bin.tar.gz
-- rm -rf ../apache-ant-1.10.2
+- rm apache-ant-1.10.2-bin.tar.gz
+- rm -rf apache-ant-1.10.2
