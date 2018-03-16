@@ -7,9 +7,9 @@ Java Desktop App Project Template
 
 Hi  I'm Vorachet
 
-Creating cross-platform executable JAR and DMG file for OS X software installer within a ANT build script saved me a lot of time. This project was inspired by the ANT script developed by https://github.com/kolovos/markingmate. I customized a few configurations for a perfect Java desktop app project template. 
+Creating cross-platform executable JAR and DMG file for OS X software installer within an ANT build script saved me a lot of time. This project was inspired by the ANT script developed by https://github.com/kolovos/markingmate. I customized a few configurations for my perfect Java desktop app project template. 
 
-My Java Desktop App Project Template is an ANT based java desktop project template. The template has a number of features below:
+Java Desktop App Project Template is an ANT based java desktop project template. The template has a number of features below:
 
 - ANT script based Java project template with pre-configured minimal local JAR files. The build script contains a default task that can be used to build cross-platform executable JAR and DMG file for OS X software installer
 - Eclipse project and classpath description file are provided for coding environment using an IDE.
@@ -24,7 +24,7 @@ Building and running the Java desktop app example
 
 Ant (http://ant.apache.org/) is required 
 
-.. code-block
+..  code-block
 
     $ git clone https://github.com/vorachet/JavaDesktopAppProjectTemplate.git 
     $ cd JavaDesktopAppProjectTemplate
@@ -60,7 +60,7 @@ Ant (http://ant.apache.org/) is required
 Folder structure after successfully running the Ant script
 ==========================================================
 
-.. code-block
+..  code-block
 
     ├── LICENSE
     ├── README.rst
