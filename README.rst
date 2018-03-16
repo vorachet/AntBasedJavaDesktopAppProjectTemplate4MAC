@@ -1,5 +1,5 @@
-Java Desktop App Project Template
-=================================
+Java Desktop App Project Template for packaging a Java App for distribution on a Mac
+====================================================================================
 
 .. image:: https://travis-ci.org/vorachet/JavaDesktopAppProjectTemplate.svg?branch=master
     :target: https://travis-ci.org/vorachet/JavaDesktopAppProjectTemplate
