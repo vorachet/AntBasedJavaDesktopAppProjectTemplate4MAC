@@ -93,7 +93,7 @@ Folder structure
                             └── TestMyApp.java
 
 
-The Bin and Dist folder after successfully running the Ant script
+Bin and Dist folder after successfully running the Ant script
 =================================================================
 
 ..  code-block::
