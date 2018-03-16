@@ -12,7 +12,7 @@ Creating cross-platform executable JAR and DMG file for OS X software installer 
 Java Desktop App Project Template is an ANT based java desktop project template that comes with a complete set of ANT tasks and pre-configured local JAR files for packaging a Java App for distribution on a Mac. The template has a number of features below:
 
 - ANT script based Java project template with pre-configured local JAR files. The build script contains a default task that can be used to build cross-platform executable JAR and DMG file for OS X software installer
-- Eclipse project and classpath description file are provided for coding environment using an IDE.
+- Eclipse project and classpath description file are provided for Eclipse coding environment.
 - Travis CI build file is provided  
 - JUNIT v4.12 and SLF4J v1.7.25 integrated in build and coding environment.
 - Ant task for running JUnit
