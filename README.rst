@@ -27,31 +27,31 @@ Ant (http://ant.apache.org/) is required
 
 ..  code-block::
 
-    $ git clone https://github.com/vorachet/JavaDesktopAppProjectTemplate.git 
-    $ cd JavaDesktopAppProjectTemplate
+    $ git clone https://github.com/vorachet/AntBasedJavaDesktopAppProjectTemplate4MAC.git
+    $ cd AntBasedJavaDesktopAppProjectTemplate4MAC
     $ ant
 
-        Buildfile: JavaDesktopAppProjectTemplate/build.xml
+        Buildfile: AntBasedJavaDesktopAppProjectTemplate4MAC/build.xml
 
         clean:
-           [delete] Deleting directory JavaDesktopAppProjectTemplate/bin
-           [delete] Deleting directory JavaDesktopAppProjectTemplate/dist
-            [mkdir] Created dir: JavaDesktopAppProjectTemplate/bin
+           [delete] Deleting directory AntBasedJavaDesktopAppProjectTemplate4MAC/bin
+           [delete] Deleting directory AntBasedJavaDesktopAppProjectTemplate4MAC/dist
+            [mkdir] Created dir: AntBasedJavaDesktopAppProjectTemplate4MAC/bin
 
         compile:
-            [javac] Compiling 3 source files to JavaDesktopAppProjectTemplate/bin
+            [javac] Compiling 3 source files to AntBasedJavaDesktopAppProjectTemplate4MAC/bin
 
         test:
             [junit] Running com.example.test.TestMyApp
             [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.514 sec
 
         package:
-              [jar] Building jar: JavaDesktopAppProjectTemplate/dist/MyApp.jar
-              [zip] Building zip: JavaDesktopAppProjectTemplate/dist/MyApp4Win.zip
+              [jar] Building jar: AntBasedJavaDesktopAppProjectTemplate4MAC/dist/MyApp.jar
+              [zip] Building zip: AntBasedJavaDesktopAppProjectTemplate4MAC/dist/MyApp4Win.zip
         [bundleapp] Creating app bundle: MyApp
           [copydir] DEPRECATED - The copydir task is deprecated.  Use copy instead.
-          [copydir] Copying 1 file to JavaDesktopAppProjectTemplate/dist/MyApp.app/Contents/Home/resources
-             [exec] created: JavaDesktopAppProjectTemplate/dist/MyApp4Mac.dmg
+          [copydir] Copying 1 file to AntBasedJavaDesktopAppProjectTemplate4MAC/dist/MyApp.app/Contents/Home/resources
+             [exec] created: AntBasedJavaDesktopAppProjectTemplate4MAC/dist/MyApp4Mac.dmg
 
         default:
 
