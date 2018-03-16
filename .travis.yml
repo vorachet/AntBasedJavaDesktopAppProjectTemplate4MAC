@@ -7,5 +7,20 @@ before_install:
 - export PATH=`pwd`/apache-ant-1.10.2/bin:$PATH
 script:
 - ant
-- rm apache-ant-1.10.2-bin.tar.gz
-- rm -rf apache-ant-1.10.2
+- rm -rf apache-ant*
+deploy:
+  provider: releases
+  api_key:
+    secure: yXVi1b05dFPWuRDF_5ilsw
+  file:
+  - dist/MyApp.jar
+  - dist/MyApp4Mac.dmg
+  - dist/MyApp4Win.zip
+  skip_cleanup: true
+  name: Build $(date +'%d.%m.%Y %R')
+  on:
+    repo: vorachet/JavaDesktopAppProjectTemplate
+    tags: true
+env:
+  global:
+    secure: Z3m04OWkc/vpIG+EkVcqt669o2MMpDFDgLfBlIl/cGYcy5AltAVj/tUq69wPMXK5FPeJuNq4MwqR8Slk3QprmKQH0shrZk6Keg1HHU02h0IF1/MOI56KTatT92uM/nGscfPs/9YjwdhXMsUP8sAwfTuH6ibz3K7fXC2JnFsrbtoZrQX5B62/D9Emm2BTCcVdqGHzJcWofWoQKuWsTs4owcyyIU/jQfHpXNY5yrOYBhKz/7owrEB8iiAhq1t1Aw/P/CLdbfn1SCC0vQIm4riTO3BHgR6ivv7cU2OS50VuI4PL9b7nEbZa1Ka89lyyCcCsiFDCvmHMDo3J5Eheo8ys0C+b+2KFWKouRM4Fzr+B8vnr4VcWrWnGsyNhf7txQJCDJZzd1avLDHnB0qKn+W7WuxM8ySIRDnhAXQ9FbF3r/0U1vhYKkpCveQLOyWQt7l6VquxCqc/afvQZyeVsgbTcqQeeAnGB9nc8fqD9IaDOsWwI7P7tDzAV3cuVTvm+DivJ3cIHIvxNuv6+xsx4h2YOXaeJpSVekL/reU7qTxJPZ/sHWxjj83BvARZWPOoA/CkkrfcMlOb3xT7Jjdgu+5QTPMEQT3rsQfoEVjg14EI4Y9Ow1G/Wt+5r7hpe/5RDI7k8dsgxLvl5tnKbzkpmyL5XxcT3+qoAvmsePLMSAHB3rsg=
