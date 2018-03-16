@@ -8,6 +8,10 @@ before_install:
 script:
 - ant
 - rm -rf apache-ant*
+before_deploy:
+  - git config --local user.name "Vorachet Jaroensawas"
+  - git config --local user.email "vorahet@gmail.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
   api_key:
