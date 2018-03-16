@@ -18,6 +18,7 @@ Java Desktop App Project Template is an ANT based java desktop project template.
 - Ant task for running JUnit
 - Project was tested on TravisCI
 
+Enjoy your desktop app development
 
 Building and running the Java desktop app example
 =================================================
