@@ -24,7 +24,8 @@ Building and running the Java desktop app example
 
 Ant (http://ant.apache.org/) is required 
 
-.. code-block::
+.. code-block
+
     $ git clone https://github.com/vorachet/JavaDesktopAppProjectTemplate.git 
     $ cd JavaDesktopAppProjectTemplate
     $ ant
@@ -59,7 +60,8 @@ Ant (http://ant.apache.org/) is required
 Folder structure after successfully running the Ant script
 ==========================================================
 
-.. code-block::
+.. code-block
+
     ├── LICENSE
     ├── README.rst
     ├── bin
