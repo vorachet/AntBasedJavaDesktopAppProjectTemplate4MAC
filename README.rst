@@ -57,51 +57,14 @@ Ant (http://ant.apache.org/) is required
         BUILD SUCCESSFUL
         Total time: 14 seconds
 
-Folder structure after successfully running the Ant script
-==========================================================
+Folder structure
+=================
 
 ..  code-block::
 
     ├── LICENSE
     ├── README.rst
-    ├── bin
-    │   ├── TEST-com.example.test.TestMyApp.txt
-    │   ├── TEST-com.example.test.TestMyApp.xml
-    │   └── com
-    │       └── example
-    │           ├── MyApp$1.class
-    │           ├── MyApp.class
-    │           ├── test
-    │           │   └── TestMyApp.class
-    │           └── ui
-    │               ├── MainFrame$1.class
-    │               └── MainFrame.class
     ├── build.xml
-    ├── dist
-    │   ├── MyApp.app
-    │   │   └── Contents
-    │   │       ├── Home
-    │   │       │   └── resources
-    │   │       │       └── app.icns
-    │   │       ├── Info.plist
-    │   │       ├── Java
-    │   │       │   ├── MacWidgets.jar
-    │   │       │   ├── MyApp.jar
-    │   │       │   └── quaqua.jar
-    │   │       ├── MacOS
-    │   │       │   ├── JavaAppLauncher
-    │   │       │   ├── libquaqua.jnilib
-    │   │       │   ├── libquaqua64.dylib
-    │   │       │   └── libquaqua64.jnilib
-    │   │       ├── PkgInfo
-    │   │       ├── PlugIns
-    │   │       └── Resources
-    │   │           ├── app.icns
-    │   │           └── en.lproj
-    │   │               └── Localizable.strings
-    │   ├── MyApp.jar
-    │   ├── MyApp4Mac.dmg
-    │   └── MyApp4Win.zip
     ├── lib
     │   ├── MacWidgets.jar
     │   ├── appbundler-1.0.jar
@@ -130,4 +93,47 @@ Folder structure after successfully running the Ant script
                         └── test
                             └── TestMyApp.java
 
+
+The Bin and Dist folder after successfully running the Ant script
+=================================================================
+
+..  code-block::
+
+    ├── bin
+    │   ├── TEST-com.example.test.TestMyApp.txt
+    │   ├── TEST-com.example.test.TestMyApp.xml
+    │   └── com
+    │       └── example
+    │           ├── MyApp$1.class
+    │           ├── MyApp.class
+    │           ├── test
+    │           │   └── TestMyApp.class
+    │           └── ui
+    │               ├── MainFrame$1.class
+    │               └── MainFrame.class
+    ├── dist
+    │   ├── MyApp.app
+    │   │   └── Contents
+    │   │       ├── Home
+    │   │       │   └── resources
+    │   │       │       └── app.icns
+    │   │       ├── Info.plist
+    │   │       ├── Java
+    │   │       │   ├── MacWidgets.jar
+    │   │       │   ├── MyApp.jar
+    │   │       │   └── quaqua.jar
+    │   │       ├── MacOS
+    │   │       │   ├── JavaAppLauncher
+    │   │       │   ├── libquaqua.jnilib
+    │   │       │   ├── libquaqua64.dylib
+    │   │       │   └── libquaqua64.jnilib
+    │   │       ├── PkgInfo
+    │   │       ├── PlugIns
+    │   │       └── Resources
+    │   │           ├── app.icns
+    │   │           └── en.lproj
+    │   │               └── Localizable.strings
+    │   ├── MyApp.jar
+    │   ├── MyApp4Mac.dmg
+    │   └── MyApp4Win.zip
 
