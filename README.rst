@@ -4,9 +4,6 @@ Ant Based Java Desktop App Project Template for packaging a Java App for distrib
 .. image:: https://travis-ci.org/vorachet/AntBasedJavaDesktopAppProjectTemplate4MAC.svg?branch=master
     :target: https://travis-ci.org/vorachet/AntBasedJavaDesktopAppProjectTemplate4MAC
 
-
-Hi  I'm Vorachet
-
 Creating cross-platform executable JAR and DMG file for OS X software installer within an ANT build script saved me a lot of time. This project was inspired by the ANT script developed by https://github.com/kolovos/markingmate. I customized a few configurations for my perfect Java desktop app project template. 
 
 Java Desktop App Project Template is an ANT based java desktop project template that comes with a complete set of ANT tasks and pre-configured local JAR files for packaging a Java App for distribution on a Mac. The template has a number of features below:
